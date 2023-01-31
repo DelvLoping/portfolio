@@ -26,6 +26,7 @@ interface Page {
   route: string;
 }
 
+
 function initVisiblePageIndexs(pages: Page[]) {
   const tabs = [];
   for (let i = 0; i < pages.length; i++) {
