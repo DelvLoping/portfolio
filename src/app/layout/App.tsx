@@ -19,7 +19,7 @@ import Home from "../pages/Home";
 import { pages } from "../pages/pages";
 import usePageTracking from "../hooks/usePageTracking";
 import { isBrowser } from "react-device-detect";
-
+import { useTranslation } from "react-i18next"
 interface Page {
   index: number;
   name: string;
@@ -36,6 +36,7 @@ function initVisiblePageIndexs(pages: Page[]) {
 }
 
 export default function App() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(isBrowser);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -151,7 +152,7 @@ export default function App() {
                     color="text.secondary"
                     sx={{ ml: 4 }}
                   >
-                    EXPLORER
+                    {t('common.translated-explorer').toUpperCase()}
                   </Typography>
                   <AppTree
                     pages={pages}
@@ -197,11 +198,11 @@ export default function App() {
                     path="/"
                     element={<Home setSelectedIndex={setSelectedIndex} />}
                   />
-                  {pages.map(({ index, name, route }) => (
+                  {pages.map(({ index, name, route,oldname }) => (
                     <Route
                       key={index}
                       path={route}
-                      element={<MDContainer path={`./pages/${name}`} />}
+                      element={<MDContainer path={`./pages/${oldname}`} />}
                     />
                   ))}
                   <Route path="*" element={<Navigate to="/" replace />} />

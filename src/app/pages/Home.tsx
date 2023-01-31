@@ -11,12 +11,14 @@ import React, { useEffect } from "react";
 import logo from "../../static/favicon.png";
 import { useLocation } from "react-router-dom";
 import { links } from "./links";
+import { useTranslation } from "react-i18next"
 
 interface Props {
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function Home({ setSelectedIndex }: Props) {
+  const { t } = useTranslation();
   const { pathname } = useLocation();
   useEffect(() => {
     setSelectedIndex(-1);
@@ -25,6 +27,11 @@ export default function Home({ setSelectedIndex }: Props) {
   useEffect(() => {
     document.title = process.env.REACT_APP_NAME!;
   }, [pathname]);
+
+  const getTheMailto = (link:string):void => {
+    window.open(link);
+  }
+
 
   return (
     <Grid
@@ -52,7 +59,7 @@ export default function Home({ setSelectedIndex }: Props) {
               justifyContent={{ xs: "center", sm: "flex-start" }}
             >
               <Typography variant="subtitle1" gutterBottom>
-                Always difficult, always beautiful
+              {t('common.translated-hello')}
                 {/* Better an{' '}
                 <Box fontWeight="fontWeightMedium" display="inline">
                   oops
@@ -69,15 +76,29 @@ export default function Home({ setSelectedIndex }: Props) {
             >
               <Stack direction="row" spacing={0.4}>
                 {links.map((link) => (
-                  <Tooltip key={link.index} title={link.title} arrow>
+                  <Tooltip key={link.index} title={t(link.title)??""} arrow>
+                    {link.href.startsWith("mailto") ?
                     <Link
-                      target="_blank"
-                      href={link.href}
-                      underline="none"
-                      color="inherit"
-                    >
-                      <IconButton color="inherit">{link.icon}</IconButton>
+                    target="_blank"
+                    href="#"
+                    underline="none"
+                    color="inherit"
+                    onClick={() => getTheMailto(link.href)}
+                  >
+                    <IconButton color="inherit">{link.icon}</IconButton>
                     </Link>
+                
+                    :
+                    <Link
+                  target="_blank"
+                  href={link.href}
+                  underline="none"
+                  color="inherit"
+                >
+                  <IconButton color="inherit">{link.icon}</IconButton>
+                    </Link>
+                    }
+                      
                   </Tooltip>
                 ))}
               </Stack>

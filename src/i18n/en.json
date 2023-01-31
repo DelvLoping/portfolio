@@ -1,0 +1,18 @@
+{
+    "common": {
+        "translate-button": "EN",
+        "translated-text": "This is english",
+        "translated-hello":"Welcome to my world",
+        "translated-email":"Contact me via email",
+        "translated-LinkedIn":"Find me on LinkedIn",
+        "translated-Github":"Find me on Github",
+        "translated-explorer":"explorer",
+        "translated-overview":"overview.md",
+        "translated-skills":"skills.md",
+        "translated-experience":"experience.md",
+        "translated-education":"education.md",
+        "translated-projects":"projects.md",
+        "translated-certificates":"certificates.md",
+        "translated-accomplishments":"accomplishments.md"
+    }
+}

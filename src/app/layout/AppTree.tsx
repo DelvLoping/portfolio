@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import { VscMarkdown } from "react-icons/vsc";
+import { useTranslation } from "react-i18next"
 
 interface Page {
   index: number;
@@ -37,6 +38,7 @@ export default function AppTree({
   visiblePageIndexs,
   setVisiblePageIndexs,
 }: Props) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const theme = useTheme();
   // const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -91,7 +93,7 @@ export default function AppTree({
           <TreeItem
             key={index}
             nodeId={index.toString()}
-            label={name}
+            label={t(name)??""}
             sx={{
               color: renderTreeItemColor(index),
               backgroundColor: renderTreeItemBgColor(index),

@@ -4,6 +4,7 @@ import { VscMarkdown, VscChromeClose } from "react-icons/vsc";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { Container } from "@mui/system";
+import { useTranslation } from "react-i18next"
 
 interface Props {
   pages: {
@@ -28,6 +29,7 @@ export default function AppButtons({
   visiblePageIndexs,
   setVisiblePageIndexs,
 }: Props) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const theme = useTheme();
   // const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -117,7 +119,7 @@ export default function AppButtons({
           >
             <VscMarkdown />
           </Box>
-          {name}
+          {t(name)}
           <Box
             component={Paper}
             sx={{

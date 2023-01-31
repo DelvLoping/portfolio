@@ -1,0 +1,18 @@
+{
+    "common": {
+        "translate-button": "FR",
+        "translated-text": "C'est du français",
+        "translated-hello":"Bienvenue dans mon monde",
+        "translated-email":"Contact moi via email",
+        "translated-LinkedIn":"Trouve moi sur LinkedIn",
+        "translated-Github":"Trouve moi sur Github",
+        "translated-explorer":"explorateur",
+        "translated-overview":"aperçu.md",
+        "translated-skills":"compétences.md",
+        "translated-experience":"expérience_pro.md",
+        "translated-education":"parcours_scolaire.md",
+        "translated-projects":"projets.md",
+        "translated-certificates":"diplomes.md",
+        "translated-accomplishments":"réussites.md"
+    }
+}

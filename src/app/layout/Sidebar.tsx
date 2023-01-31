@@ -2,10 +2,13 @@ import React from "react";
 import { Box, Link, Paper, Tooltip } from "@mui/material";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import { VscFiles, VscSettingsGear } from "react-icons/vsc";
+import { VscFiles } from "react-icons/vsc";
 import { BiGitBranch } from "react-icons/bi";
 import Divider from "@mui/material/Divider";
 import { links } from "../pages/links";
+import {IoLanguage} from  "react-icons/io5";
+import Lang from "../components/Lang";
+import { useTranslation } from "react-i18next"
 
 interface Props {
   expanded: boolean;
@@ -20,6 +23,10 @@ export default function Sidebar({
   darkMode,
   handleThemeChange,
 }: Props) {
+  const { t } = useTranslation();
+  const getTheMailto = (link:string):void => {
+    window.open(link);
+  }
   return (
     <Box
       sx={{
@@ -99,8 +106,35 @@ export default function Sidebar({
         <Divider sx={{ m: 0.5 }} />
 
         {links.map((link) => (
-          <Tooltip title={link.title} arrow placement="right" key={link.index}>
-            <Link
+          <Tooltip title={t(link.title)??""} arrow placement="right" key={link.index}>
+            {link.href.startsWith("mailto") ?
+                    <Link
+                    target="_blank"
+                    href="#"
+                    underline="none"
+                    color="inherit"
+                    sx={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }}
+                    onClick={() => getTheMailto(link.href)}
+                  >
+                    <Box
+                      sx={{
+                        flexGrow: 0,
+                        m: 0.5,
+                        color: "#858585",
+                        fontSize: 24,
+                        "&:hover": {
+                          color: "white",
+                        },
+                        cursor: "pointer",
+                      }}
+                      display="flex"
+                      justifyContent="center"
+                    >
+                      <Box mt={0.7}>{link.icon}</Box>
+                    </Box>
+                  </Link>
+                    :
+                    <Link
               target="_blank"
               href={link.href}
               underline="none"
@@ -124,6 +158,7 @@ export default function Sidebar({
                 <Box mt={0.7}>{link.icon}</Box>
               </Box>
             </Link>
+                    }
           </Tooltip>
         ))}
       </Box>
@@ -180,7 +215,8 @@ export default function Sidebar({
           justifyContent="center"
         >
           <Box mt={0.7}>
-            <VscSettingsGear />
+          <Lang />
+            {/*<IoLanguage />*/}
           </Box>
         </Box>
       </Box>
