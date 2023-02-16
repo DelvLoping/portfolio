@@ -9,7 +9,7 @@ import './i18n';
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-//test9
+
 root.render(
   <React.StrictMode>
     <HashRouter>
