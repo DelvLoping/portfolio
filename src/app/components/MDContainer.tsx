@@ -19,6 +19,7 @@ import { useLocation } from "react-router-dom";
 import rehypeRaw from "rehype-raw";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
+import { useTranslation } from "react-i18next"
 
 interface Props {
   path: string;
@@ -138,11 +139,21 @@ function MarkdownH2(props: { children: ReactNode }) {
 export default function MDContainer({ path }: Props) {
   const [content, setContent] = useState("");
   const { pathname } = useLocation();
+  const { t } = useTranslation();
   useEffect(() => {
     fetch(path)
       .then((res) => res.text())
-      .then((text) => setContent(text));
-  }, [path]);
+      .then((text) => {console.log(text)
+        let arrText:string[]=text.split(" ")
+        console.log(arrText)
+        arrText=arrText.map((text)=> {
+          
+          return text.startsWith('common')?t(text.trim()):text
+        })
+        let res:string=arrText.join(" ")
+        console.log(res)
+        setContent(res)})
+  }, [path,t]);
 
   useEffect(() => {
     let title = pathname.substring(1, pathname.length);

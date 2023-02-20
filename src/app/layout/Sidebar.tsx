@@ -6,9 +6,9 @@ import { VscFiles } from "react-icons/vsc";
 import { BiGitBranch } from "react-icons/bi";
 import Divider from "@mui/material/Divider";
 import { links } from "../pages/links";
-import {IoLanguage} from  "react-icons/io5";
-import Lang from "../components/Lang";
 import { useTranslation } from "react-i18next"
+import Lang from "../components/Lang";
+
 
 interface Props {
   expanded: boolean;
@@ -170,7 +170,7 @@ export default function Sidebar({
         flexDirection="column"
       >
         <Tooltip
-          title={darkMode ? "Turn on the light" : "Turn off the light"}
+          title={darkMode ? t('common.translated-darkmodeOn')??"" : t('common.translated-darkmodeOff')??""}
           placement="right"
           arrow
         >
@@ -216,7 +216,6 @@ export default function Sidebar({
         >
           <Box mt={0.7}>
           <Lang />
-            {/*<IoLanguage />*/}
           </Box>
         </Box>
       </Box>

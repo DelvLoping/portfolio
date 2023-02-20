@@ -1,7 +1,6 @@
 {
     "common": {
         "translate-button": "FR",
-        "translated-text": "C'est du français",
         "translated-hello":"Bienvenue dans mon monde",
         "translated-email":"Contact moi via email",
         "translated-LinkedIn":"Trouve moi sur LinkedIn",
@@ -13,6 +12,32 @@
         "translated-education":"parcours_scolaire.md",
         "translated-projects":"projets.md",
         "translated-certificates":"diplomes.md",
-        "translated-accomplishments":"réussites.md"
+        "translated-accomplishments":"réussites.md",
+        "translated-translate":"Traduire en Anglais",
+        "translated-darkmodeOn":"Activer le mode sombre",
+        "translated-darkmodeOff":"Désactiver le mode sombre",
+        "translated-overviewPage":{
+            "title":"Aperçu",
+            "summarytitle":"Sommaire",
+            "summary":"Développeur logiciel senior spécialisé dans le développement d'applications web. Expérimenté à toutes les étapes du cycle de développement de projets Web dynamiques. Maîtrise de nombreux langages de programmation, dont C# .NET, Python et JavaScript/TypeScript. Solide expérience en comptabilité/audit et en développement de logiciels. Atténuation de l'écart entre les utilisateurs finaux et les développeurs, co-conception et construction de solutions évolutives.",
+            "experiencetitle":"Experience",
+            "experience":"**Software Developer** @ [Ernst & Young](https://www.ey.com/) _(Nov 2018 - Nov 2021)_\n\nCompleted full lifecycle application development to enterprise business applications including requirement analysis, system design, development, unit testing, implementation, testing support, performance tuning, maintenance, and post-production support.\n- Detailed achievements:\n  - Collaborated with colleagues from worldwide to implement the Disaster Recovery Project. Completed ahead of the original schedule and saved budget up to 30%.\n  - Optimized deployment process and reduced manual work to accelerate product deployment by over 70%.\n  - Delivered virtual and live classroom training for employees(the cumulative number of trainees exceeded 500)./\n- _**Technologies used:**_ C#, MSSQL, Python, React.js\n\n&nbsp;\n\n**Staff Auditor** @ [Deloitte & Touche](https://www2.deloitte.com/global/en.html) _(July 2017 - Nov 2018)_\n\nPlanned and conducted operational and ﬁnancial audits to conﬁrm ﬁnancial statements are fairly presented in alignment with IFRS.\n- Detailed achievements:\n  - Delivered internal audit projects for major clients in the manufacturing industry with a focus on gap assessments/reviews of business processes and internal control.\n  - Supervised assigned auditing staffs to evaluate performance and maintain standards.\n\n&nbsp;\n\n**Audit Intern** @ [KPMG](https://home.kpmg/) _(July 2015 - July 2015)_\n\nPerformed analytical procedures and analyses to detect unusual ﬁnancial relationships.",
+            "educationtitle":"Parcours scolaire",
+            "education":"`2021-2022` [National Taipei University of Technology](https://www-en.ntut.edu.tw/)\n- **Extension program** in Computer Science, Electrical Engineering, and Electronic Engineering\n- Courses: Computer Organization, Discrete Mathematics, Computer Program-\nming(I), Object-Oriented Programming, Probability, Digital Logic Design\n- GPA: 4.0/4.0\n\n`2021-2022` [National Taiwan Normal University](https://en.ntnu.edu.tw/)\n- **Extension program** in Electrical Engineering\n- Courses: Operating Systems\n- GPA: 4.3/4.3\n\n`2020–2022` [Fu Jen Catholic University](https://www.fju.edu.tw/indexEN.jsp)\n- **Extension program** in Software Engineering and Digital Innovation Applications, and Information Management \n- Courses: Algorithms, Linear Algebra, Database Administration\n- GPA: 4.0/4.0\n\n`2020-2021` [National Taipei University of Business](https://www.ntub.edu.tw/index.php?Lang=en)\n- **Extension program** in Information Management \n- Courses: Data Structures\n- GPA: 4.0/4.0\n\n`2012-2016` [National Cheng Kung University](https://www.ncku.edu.tw/index.php?Lang=en)\n- **B.B.A** in Accountancy\n- GPA: 3.88/4.0",
+            "skillstitle":"Compétences",
+            "skillsgentitle":"Connaissances techniques général",
+            "skillsgen":"- Architecture Design\n- Desktop App Development\n- Web Development (Frontend & Backend)",
+            "programminglangtitle":"Langages de programmation",
+            "programminglang":"- C# .NET\n- Python\n- JavaScript/TypeScript\n  - React.js\n- T-SQL\n- Go\n- C++\n- Java\n- VB.NET/VBA",
+            "certificatestitle":"Diplomes",
+            "certificates":"- Certified Public Accountant (Taiwan)",
+            "accomplishmentstitle":"Réussites",
+            "accomplishments":"**Won First Place** @ [EY Innovation Campaign](https://www.ey.com/) _(May 2021)_\nBuilt Trial Balance System, a system that streamlines data transmission across users, providing consistent, reliable financial reports to them. ",
+            "languagestitle":"Langues",
+            "languages":"**Anglais**: C1\n**Français**: Native"
+        },
+        "translated-accomplishmentsTitre":"Réussites"
+
+
     }
 }
