@@ -1,7 +1,6 @@
 {
   "name": "react-vscode-portfolio",
   "version": "0.1.0",
-  "homepage": "http://92.222.181.202/portfolio/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
