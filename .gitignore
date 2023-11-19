@@ -8,6 +8,7 @@
 
 # production
 /build
+update.php
 
 # misc
 .DS_Store
