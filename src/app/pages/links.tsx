@@ -16,7 +16,7 @@ export const links = [
   {
     index: 1,
     title: 'common.translated-LinkedIn',
-    href: "https:www.linkedin.com/in/florent-delobe-63861b192",
+    href: "https://www.linkedin.com/in/florent-delobe-63861b192",
     icon: <FaLinkedin />,
   },
   {
